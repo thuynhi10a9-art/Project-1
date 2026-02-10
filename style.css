@@ -1,0 +1,23 @@
+.big-title {
+  font-size: 44px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.section-title {
+  font-size: 32px;
+  font-weight: 700;
+  margin-top: 60px;
+  margin-bottom: 10px;
+}
+
+.para {
+  font-size: 18px;
+  max-width: 900px;
+  line-height: 1.6;
+}
+
+.chart-box {
+  max-width: 900px;
+  margin-top: 10px;
+}

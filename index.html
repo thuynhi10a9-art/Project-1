@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- METADATA GOES HERE -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>My Phone Time Journey</title>
+  <link href="style.css" rel="stylesheet">
+
+  <!-- BOOTSTRAP 5 -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+    crossorigin="anonymous">
+
+  <!-- p5 -->
+  <script src="https://cdn.jsdelivr.net/npm/p5@1.11.11/lib/p5.min.js"></script>
+
+  <!-- JQUERY -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+    crossorigin="anonymous"></script>
+
+  <script src="script.js"></script>
+</head>
+
+<body>
+  <div class="container my-5">
+
+    <!-- INTRO -->
+    <h1 class="big-title">My Phone Time Journey</h1>
+    <p class="para">
+      I use my phone every day for studying, chatting, and entertainment. Over time, my screen time has changed depending
+      on school and my habits. This page shows simple charts about how I use my phone.
+    </p>
+
+    <!-- CHART 1 -->
+    <h2 class="section-title">Total Screen Time (2020–2025)</h2>
+    <p class="para">
+        My phone is basically the “background music” of my day—whether I’m commuting, studying, or just
+        procrastinating in style. Over the years, my screen time has shifted depending on school workload,
+        social habits, and the kind of content I get addicted to. This project tells a small story about
+        how I use my phone—and what patterns keep showing up.
+    </p>
+
+    <div class="chart-box">
+      <canvas id="chart1"></canvas>
+    </div>
+
+    <!-- CHART 2 -->
+    <h2 class="section-title">Most Used Phone Activities (2025)</h2>
+    <p class="para">
+       Since 2021, my screen time has steadily increased. Some years were “deep-focus” years
+        (lots of studying and note-taking apps), while other years were more about entertainment
+        and social scrolling. The chart below visualizes my total phone usage time across five years.
+    </p>
+
+    <div class="chart-box">
+      <canvas id="chart2"></canvas>
+    </div>
+
+    <!-- CHART 3 (p5 like Exercise 2) -->
+    <h2 class="section-title">Daily Minutes by App (2025)</h2>
+    <p class="para">
+    Below is a simple code-driven visualization (using p5 + JSON) showing my daily minutes
+        spent on the most-used apps in 2024. This is the “habit scoreboard” version of the story.
+      </p>
+    </p>
+
+    <div id="p5-holder" class="chart-box"></div>
+
+  </div>
+
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <script>
+    const ctx = document.getElementById('chart1');
+
+    new Chart(ctx, {
+      type: 'line',
+      data: {
+        labels: ['2021', '2022', '2023', '2024', '2025'],
+        datasets: [{
+          label: 'Minutes per year',
+          data: [42000, 45500, 49000, 59000, 64000],
+          borderWidth: 1
+        }]
+      },
+      options: {
+      }
+    });
+  </script>
+
+  <script>
+    const ctx2 = document.getElementById('chart2');
+
+    new Chart(ctx2, {
+      type: 'bar',
+      data: {
+        labels: ['Social', 'Video', 'Messaging', 'Music', 'Study', 'Other'],
+        datasets: [{
+          label: 'Minutes per week',
+          data: [900, 780, 480, 300, 360, 140],
+          borderWidth: 1
+        }]
+      },
+      options: {
+      }
+    });
+  </script>
+
+</body>
+
+</html>

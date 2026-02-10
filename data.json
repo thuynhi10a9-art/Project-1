@@ -1,0 +1,7 @@
+{
+  "a": { "name": "TikTok", "amount": 70, "color": "hotpink" },
+  "b": { "name": "YouTube", "amount": 55, "color": "deepskyblue" },
+  "c": { "name": "Instagram", "amount": 40, "color": "gold" },
+  "d": { "name": "Messenger", "amount": 30, "color": "mediumturquoise" },
+  "e": { "name": "Spotify", "amount": 20, "color": "mediumpurple" }
+}
